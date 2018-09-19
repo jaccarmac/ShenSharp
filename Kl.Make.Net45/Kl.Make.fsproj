@@ -81,11 +81,11 @@
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
-    <Compile Include="..\Reader.fs" />
-    <Compile Include="..\Syntax.fs" />
-    <Compile Include="..\Compiler.fs" />
-    <Compile Include="..\Loader.fs" />
-    <Compile Include="..\BuildRuntime.fs" />
+    <Compile Include="..\Kl.Make\Reader.fs" />
+    <Compile Include="..\Kl.Make\Syntax.fs" />
+    <Compile Include="..\Kl.Make\Compiler.fs" />
+    <Compile Include="..\Kl.Make\Loader.fs" />
+    <Compile Include="..\Kl.Make\BuildRuntime.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kl.Net45\Kl.fsproj">
