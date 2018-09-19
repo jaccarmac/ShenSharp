@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Assertions.fs" />
+    <Compile Include="PrintDebugInfo.fs" />
+    <Compile Include="Equality.fs" />
+    <Compile Include="KlReading.fs" />
+    <Compile Include="ExpressionRecognition.fs" />
+    <Compile Include="Arithmetic.fs" />
+    <Compile Include="EvaluationOrder.fs" />
+    <Compile Include="ConditionalEvaluation.fs" />
+    <Compile Include="SymbolResolution.fs" />
+    <Compile Include="ErrorHandling.fs" />
+    <Compile Include="PrimitiveFunctions.fs" />
+    <Compile Include="PartialApplication.fs" />
+    <Compile Include="ScopeCapture.fs" />
+    <Compile Include="TailCallOptimization.fs" />
+    <Compile Include="ForeignFunctionInterface.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kl\Kl.fsproj" />
+    <ProjectReference Include="..\Kl.Make\Kl.Make.fsproj" />
+  </ItemGroup>
+
+</Project>

@@ -56,21 +56,21 @@
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
-    <Compile Include="Assertions.fs" />
-    <Compile Include="PrintDebugInfo.fs" />
-    <Compile Include="Equality.fs" />
-    <Compile Include="KlReading.fs" />
-    <Compile Include="ExpressionRecognition.fs" />
-    <Compile Include="Arithmetic.fs" />
-    <Compile Include="EvaluationOrder.fs" />
-    <Compile Include="ConditionalEvaluation.fs" />
-    <Compile Include="SymbolResolution.fs" />
-    <Compile Include="ErrorHandling.fs" />
-    <Compile Include="PrimitiveFunctions.fs" />
-    <Compile Include="PartialApplication.fs" />
-    <Compile Include="ScopeCapture.fs" />
-    <Compile Include="TailCallOptimization.fs" />
-    <Compile Include="ForeignFunctionInterface.fs" />
+    <Compile Include="..\Kl.Tests\Assertions.fs" />
+    <Compile Include="..\Kl.Tests\PrintDebugInfo.fs" />
+    <Compile Include="..\Kl.Tests\Equality.fs" />
+    <Compile Include="..\Kl.Tests\KlReading.fs" />
+    <Compile Include="..\Kl.Tests\ExpressionRecognition.fs" />
+    <Compile Include="..\Kl.Tests\Arithmetic.fs" />
+    <Compile Include="..\Kl.Tests\EvaluationOrder.fs" />
+    <Compile Include="..\Kl.Tests\ConditionalEvaluation.fs" />
+    <Compile Include="..\Kl.Tests\SymbolResolution.fs" />
+    <Compile Include="..\Kl.Tests\ErrorHandling.fs" />
+    <Compile Include="..\Kl.Tests\PrimitiveFunctions.fs" />
+    <Compile Include="..\Kl.Tests\PartialApplication.fs" />
+    <Compile Include="..\Kl.Tests\ScopeCapture.fs" />
+    <Compile Include="..\Kl.Tests\TailCallOptimization.fs" />
+    <Compile Include="..\Kl.Tests\ForeignFunctionInterface.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
