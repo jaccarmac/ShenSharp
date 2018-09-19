@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
+      <HintPath>..\packages\FSharp.Core.4.3.0.0\lib\net40\FSharp.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -111,7 +111,7 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <Target Name="AfterBuild">
-    <Copy SourceFiles="..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.optdata" DestinationFolder="$(OutputPath)" />
-    <Copy SourceFiles="..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.sigdata" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="..\packages\FSharp.Core.4.3.0.0\lib\net40\FSharp.Core.optdata" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="..\packages\FSharp.Core.4.3.0.0\lib\net40\FSharp.Core.sigdata" DestinationFolder="$(OutputPath)" />
   </Target>
 </Project>
