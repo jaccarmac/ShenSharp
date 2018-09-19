@@ -56,7 +56,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="$(SolutionDir)/ShenSharp.Shared/Shared.fs">
+    <Compile Include="$(SolutionDir)ShenSharp.Shared\Shared.fs">
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
