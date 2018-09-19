@@ -5,20 +5,20 @@ branches:
     - master
 language: csharp
 install:
-  - nuget restore Kl.sln
-  - nuget restore Shen.sln
+  - nuget restore Kl.Net45.sln
+  - nuget restore Shen.Net45.sln
   - nuget install NUnit.ConsoleRunner -Version 3.6.0 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release Kl.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Kl.Tests/bin/Release/Kl.Tests.dll
-  - pushd ./Kl.Get/bin/Release
+  - xbuild /p:Configuration=Release Kl.Net45.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Kl.Tests.Net45/bin/Release/Kl.Tests.dll
+  - pushd ./Kl.Get.Net45/bin/Release
   - mono Kl.Get.exe
   - popd
-  - pushd ./Kl.Make/bin/Release
+  - pushd ./Kl.Make.Net45/bin/Release
   - mono Kl.Make.exe
   - popd
-  - xbuild /p:Configuration=Release Shen.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Shen.Tests/bin/Release/Shen.Tests.dll
-  - pushd ./Shen.TestSuite/bin/Release
+  - xbuild /p:Configuration=Release Shen.Net45.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Shen.Tests.Net45/bin/Release/Shen.Tests.dll
+  - pushd ./Shen.TestSuite.Net45/bin/Release
   - mono Shen.TestSuite.exe
   - popd

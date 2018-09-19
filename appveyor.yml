@@ -1,18 +1,18 @@
 before_build:
-  - nuget restore Kl.sln
-  - nuget restore Shen.sln
+  - nuget restore Kl.Net45.sln
+  - nuget restore Shen.Net45.sln
   - nuget install NUnit.ConsoleRunner -Version 3.6.0 -OutputDirectory testrunner
 build_script:
-  - msbuild /p:Configuration=Release Kl.sln
-  - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Kl.Tests\bin\Release\Kl.Tests.dll
-  - cd .\Kl.Get\bin\Release
+  - msbuild /p:Configuration=Release Kl.Net45.sln
+  - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Kl.Tests.Net45\bin\Release\Kl.Tests.dll
+  - cd .\Kl.Get.Net45\bin\Release
   - Kl.Get.exe
   - cd ..\..\..
-  - cd .\Kl.Make\bin\Release
+  - cd .\Kl.Make.Net45\bin\Release
   - Kl.Make.exe
   - cd ..\..\..
-  - msbuild /p:Configuration=Release Shen.sln
-  - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Shen.Tests\bin\Release\Shen.Tests.dll
-  - cd .\Shen.TestSuite\bin\Release
+  - msbuild /p:Configuration=Release Shen.Net45.sln
+  - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Shen.Tests.Net45\bin\Release\Shen.Tests.dll
+  - cd .\Shen.TestSuite.Net45\bin\Release
   - Shen.TestSuite.exe
   - cd ..\..\..
