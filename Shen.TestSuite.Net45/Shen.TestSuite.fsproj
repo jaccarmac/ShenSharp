@@ -64,7 +64,7 @@
     <Compile Include="RunTestSuite.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shen.Api\Shen.Api.fsproj">
+    <ProjectReference Include="..\Shen.Api.Net45\Shen.Api.fsproj">
       <Name>Shen.Api</Name>
       <Project>{1885a119-975d-43f6-8a8d-8200c89a943c}</Project>
       <Private>True</Private>
@@ -83,7 +83,7 @@
     <Reference Include="Shen.Language" Condition="'$(Configuration)'=='Release'">
       <HintPath>..\Artifacts\Release\Shen.Language.dll</HintPath>
     </Reference>
-    <ProjectReference Include="..\Kl\Kl.fsproj">
+    <ProjectReference Include="..\Kl.Net45\Kl.fsproj">
       <Name>Kl</Name>
       <Project>{24903340-789d-4419-ac4b-c2c1f8000c54}</Project>
       <Private>True</Private>
