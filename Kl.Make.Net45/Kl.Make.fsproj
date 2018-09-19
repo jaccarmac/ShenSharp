@@ -77,7 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Compile Include="$(SolutionDir)Shared.fs">
+    <Compile Include="$(SolutionDir)/ShenSharp.Shared/Shared.fs">
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
