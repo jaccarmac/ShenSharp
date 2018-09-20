@@ -2,8 +2,7 @@ notifications:
   email: false
 language: csharp
 install:
-  - nuget restore Kl.Net45.sln
-  - nuget restore Shen.Net45.sln
+  - mono ./.paket/paket.exe restore
   - nuget install NUnit.ConsoleRunner -Version 3.6.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release Kl.Net45.sln
