@@ -16,16 +16,10 @@ let private dllName = sprintf "%s.dll" generatedModule
 let private pdbName = sprintf "%s.pdb" generatedModule
 let private searchPattern = sprintf "%s.*" generatedModule
 let private deps = [
-    "Kl.dll";
+    UriBuilder(typedefof<Kl.Expr>.Assembly.CodeBase).Uri.LocalPath;
     UriBuilder(typedefof<FSharp.Core.unit>.Assembly.CodeBase).Uri.LocalPath;
+    UriBuilder(typedefof<bool>.Assembly.CodeBase).Uri.LocalPath;
     combine [RuntimeEnvironment.GetRuntimeDirectory(); "mscorlib.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Console.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Private.CoreLib.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.ObjectModel.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Runtime.Extensions.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Linq.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Net.Requests.dll"];
-    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Runtime.Numerics.dll"];
 ]
 let private sharedMetadataPath = combine ["ShenSharp.Shared"; "Shared.fs"]
 

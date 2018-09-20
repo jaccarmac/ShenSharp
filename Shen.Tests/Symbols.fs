@@ -2,6 +2,9 @@
 
 open NUnit.Framework
 open Assertions
+open System
+open System.Runtime.InteropServices
+open System.IO
 
 [<Test>]
 let ``the symbols 'true and 'false should be recognized as booleans``() =
@@ -16,6 +19,17 @@ let ``the symbols 'true and 'false should be recognized as booleans``() =
 
 [<Test>]
 let ``only non-boolean symbols should be recognized as symbols``() =
+    let rec combine = function
+    | [] -> "."
+    | [x] -> x
+    | x :: xs -> Path.Combine(x, combine xs)
+    let deps = [
+        UriBuilder(typedefof<Kl.Expr>.Assembly.CodeBase).Uri.LocalPath;
+        UriBuilder(typedefof<FSharp.Core.unit>.Assembly.CodeBase).Uri.LocalPath;
+        UriBuilder(typedefof<bool>.Assembly.CodeBase).Uri.LocalPath;
+        combine [RuntimeEnvironment.GetRuntimeDirectory(); "mscorlib.dll"];
+    ]
+    printfn "%A" deps
     assertFalse "(symbol? ())"
     assertFalse "(symbol? (cons 0 ()))"
     assertFalse "(symbol? 0)"
