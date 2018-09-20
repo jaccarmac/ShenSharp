@@ -9,6 +9,4 @@ build_script:
   - .\Kl.Make.Net45\bin\Release\Kl.Make.exe
   - msbuild /p:Configuration=Release Shen.Net45.sln
   - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Shen.Tests.Net45\bin\Release\Shen.Tests.dll
-  - cd .\Shen.TestSuite.Net45\bin\Release
-  - Shen.TestSuite.exe
-  - cd ..\..\..
+  - .\Shen.TestSuite.Net45\bin\Release\Shen.TestSuite.exe

@@ -12,6 +12,4 @@ script:
   - mono ./Kl.Make.Net45/bin/Release/Kl.Make.exe
   - xbuild /p:Configuration=Release Shen.Net45.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Shen.Tests.Net45/bin/Release/Shen.Tests.dll
-  - pushd ./Shen.TestSuite.Net45/bin/Release
-  - mono Shen.TestSuite.exe
-  - popd
+  - mono ./Shen.TestSuite.Net45/bin/Release/Shen.TestSuite.exe
