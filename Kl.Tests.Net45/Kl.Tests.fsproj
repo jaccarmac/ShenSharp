@@ -50,6 +50,7 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <Compile Include="$(SolutionDir)ShenSharp.Shared\Shared.fs">
       <Link>Properties\Shared.fs</Link>
