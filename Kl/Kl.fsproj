@@ -1,9 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Types.fs" />
     <Compile Include="Values.fs" />
@@ -12,9 +11,8 @@
     <Compile Include="Builtins.fs" />
     <Compile Include="Startup.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ShenSharp.Shared\ShenSharp.Shared.fsproj" />
   </ItemGroup>
-
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

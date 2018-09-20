@@ -1,10 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Reader.fs" />
     <Compile Include="Syntax.fs" />
@@ -12,14 +11,8 @@
     <Compile Include="Loader.fs" />
     <Compile Include="BuildRuntime.fs" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FParsec" Version="1.0.3" />
-    <PackageReference Include="FSharp.Compiler.Service" Version="25.0.1" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Kl\Kl.fsproj" />
   </ItemGroup>
-
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

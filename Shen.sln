@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{09897240-6DA7-4D6B-BA79-39C0C49FF301}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ShenSharp.Shared", "ShenSharp.Shared\ShenSharp.Shared.fsproj", "{2CFD35E5-D177-4E74-9D08-5EA3BAC2985C}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Shen.Tests", "Shen.Tests\Shen.Tests.fsproj", "{39BBFB1A-EDB2-4086-950E-7E458A9CAC4F}"

@@ -1,18 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Runtime.fs" />
     <Compile Include="ExtensionMethods.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Kl\Kl.fsproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="Shen.Language" Condition="'$(Configuration)'=='Debug'">
       <HintPath>..\Shen.Language\Artifacts\Debug\Shen.Language.dll</HintPath>
@@ -21,5 +18,5 @@
       <HintPath>..\Shen.Language\Artifacts\Release\Shen.Language.dll</HintPath>
     </Reference>
   </ItemGroup>
-
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
