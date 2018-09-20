@@ -10,6 +10,7 @@
     <RootNamespace>Shen.Repl</RootNamespace>
     <AssemblyName>Shen.Repl</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.5.2</TargetFSharpCoreVersion>
     <Name>Shen.Repl</Name>
   </PropertyGroup>
