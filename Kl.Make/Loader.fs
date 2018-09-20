@@ -18,7 +18,7 @@ let private searchPattern = sprintf "%s.*" generatedModule
 let private deps = [
     "Kl.dll";
     combine [RuntimeEnvironment.GetRuntimeDirectory(); "mscorlib.dll"];
-    UriBuilder(typedefof<obj>.Assembly.CodeBase).Uri.LocalPath
+    UriBuilder(typedefof<FSharp.Core.unit>.Assembly.CodeBase).Uri.LocalPath
 ]
 let private sharedMetadataPath = combine ["ShenSharp.Shared"; "Shared.fs"]
 
