@@ -10,11 +10,16 @@ open Kl.Startup
 open Reader
 open Compiler
 open ShenSharp.Shared
+open System.Runtime.InteropServices
 
 let private dllName = sprintf "%s.dll" generatedModule
 let private pdbName = sprintf "%s.pdb" generatedModule
 let private searchPattern = sprintf "%s.*" generatedModule
-let private deps = ["Kl.dll"]
+let private deps = [
+    "Kl.dll";
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "mscorlib.dll"];
+    UriBuilder(typedefof<obj>.Assembly.CodeBase).Uri.LocalPath
+]
 let private sharedMetadataPath = combine ["ShenSharp.Shared"; "Shared.fs"]
 
 let private import sourcePath sourceFiles =
@@ -59,15 +64,16 @@ let private emit asts =
             deps,
             pdbName,
             false,
-            false) |> Async.RunSynchronously
+            true) |> Async.RunSynchronously
     if returnCode <> 0 then
         raiseErrors errors
 
-let private copy source destination =
+let private move source destination =
     if File.Exists destination then
         File.Delete destination
     Directory.CreateDirectory(Path.GetDirectoryName destination) |> ignore
     File.WriteAllBytes(destination, File.ReadAllBytes source)
+    File.Delete source
 
 let make sourcePath sourceFiles outputPath =
     let globals = import sourcePath sourceFiles
@@ -79,5 +85,5 @@ let make sourcePath sourceFiles outputPath =
     emit [ast; sharedAst; metadataAst]
     printfn "Copying artifacts to output path..."
     for file in Directory.GetFiles(".", searchPattern) do
-        copy file (combine [outputPath; file])
+        move file (combine [outputPath; file])
     printfn "Done."
