@@ -7,7 +7,7 @@ open Kl.Evaluator
 open Shen.Runtime
 open ShenSharp.Shared
 
-let testFolder = combine ["shen-sources"; KernelFolderName; "tests"]
+let testFolder = combine ["Shen.Language"; "shen-sources"; KernelFolderName; "tests"]
 
 let runTestSuite () =
     let globals = newRuntime()
