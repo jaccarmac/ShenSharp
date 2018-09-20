@@ -15,10 +15,10 @@
 
   <ItemGroup>
     <Reference Include="Shen.Language" Condition="'$(Configuration)'=='Debug'">
-      <HintPath>..\Artifacts\Debug\Shen.Language.dll</HintPath>
+      <HintPath>..\Shen.Language\Artifacts\Debug\Shen.Language.dll</HintPath>
     </Reference>
     <Reference Include="Shen.Language" Condition="'$(Configuration)'=='Release'">
-      <HintPath>..\Artifacts\Release\Shen.Language.dll</HintPath>
+      <HintPath>..\Shen.Language\Artifacts\Release\Shen.Language.dll</HintPath>
     </Reference>
   </ItemGroup>
 
