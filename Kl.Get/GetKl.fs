@@ -7,9 +7,9 @@ open System.Net
 open ShenSharp.Shared
 
 let url = sprintf "https://github.com/Shen-Language/shen-sources/releases/download/shen-%s/%s.zip" KernelRevision KernelFolderName
-let packages = combine [".."; ".."; ".."; "packages"]
-let extractedFolderPath = combine [packages; KernelFolderName]
-let zipPath = combine [packages; Path.GetFileName(Uri(url).LocalPath)]
+let shenSources = combine ["shen-sources"]
+let extractedFolderPath = combine [shenSources; KernelFolderName]
+let zipPath = combine [shenSources; Path.GetFileName(Uri(url).LocalPath)]
 
 let safeDelete x = if Directory.Exists x then Directory.Delete(x, true)
 
@@ -22,5 +22,5 @@ let main _ =
     client.DownloadFile(url, zipPath)
     printfn "Extracting sources package..."
     safeDelete extractedFolderPath
-    ZipFile.ExtractToDirectory(zipPath, packages)
+    ZipFile.ExtractToDirectory(zipPath, shenSources)
     0

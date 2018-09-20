@@ -4,9 +4,8 @@ open Kl.Values
 open Loader
 open ShenSharp.Shared
 
-let fromRoot = combine << (@) [".."; ".."; ".."]
-let outputPath = fromRoot ["Artifacts"; BuildConfig]
-let sourcePath = fromRoot ["packages"; KernelFolderName; "klambda"]
+let outputPath = combine ["Artifacts"; BuildConfig]
+let sourcePath = combine ["shen-sources"; KernelFolderName; "klambda"]
 let sourceFiles = [
     "toplevel.kl"
     "core.kl"
