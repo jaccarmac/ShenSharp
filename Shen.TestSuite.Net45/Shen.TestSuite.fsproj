@@ -11,7 +11,7 @@
     <AssemblyName>Shen.TestSuite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>4.5.2</TargetFSharpCoreVersion>
     <Name>Shen.TestSuite</Name>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -70,7 +70,7 @@
       <Private>True</Private>
     </ProjectReference>
     <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
+      <HintPath>..\packages\FSharp.Core.4.5.2\lib\net45\FSharp.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
