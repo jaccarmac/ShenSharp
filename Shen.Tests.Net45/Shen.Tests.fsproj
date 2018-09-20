@@ -56,8 +56,8 @@
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
-    <Compile Include="Assertions.fs" />
-    <Compile Include="Symbols.fs" />
+    <Compile Include="..\Shen.Tests\Assertions.fs" />
+    <Compile Include="..\Shen.Tests\Symbols.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shen.Api.Net45\Shen.Api.fsproj">

@@ -54,8 +54,8 @@
       <Link>Properties\Shared.fs</Link>
     </Compile>
     <Compile Include="Properties\Metadata.fs" />
-    <Compile Include="Runtime.fs" />
-    <Compile Include="ExtensionMethods.fs" />
+    <Compile Include="..\Shen.Api\Runtime.fs" />
+    <Compile Include="..\Shen.Api\ExtensionMethods.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kl.Net45\Kl.fsproj">
