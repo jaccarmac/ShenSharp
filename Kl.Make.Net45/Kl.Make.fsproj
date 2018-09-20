@@ -86,8 +86,8 @@
     </When>
   </Choose>
   <Target Name="AfterBuild">
-    <Copy SourceFiles="..\packages\FSharp.Core.4.5.2\lib\net45\FSharp.Core.optdata" DestinationFolder="$(OutputPath)" />
-    <Copy SourceFiles="..\packages\FSharp.Core.4.5.2\lib\net45\FSharp.Core.sigdata" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="..\packages\FSharp.Core\lib\net45\FSharp.Core.optdata" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="..\packages\FSharp.Core\lib\net45\FSharp.Core.sigdata" DestinationFolder="$(OutputPath)" />
   </Target>
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.0' Or $(TargetFrameworkVersion) == 'v4.0.3' Or $(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2')">
