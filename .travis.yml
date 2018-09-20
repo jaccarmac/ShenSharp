@@ -8,8 +8,8 @@ install:
 script:
   - xbuild /p:Configuration=Release Kl.Net45.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Kl.Tests.Net45/bin/Release/Kl.Tests.dll
-  - ./Kl.Get.Net45/bin/Release/Kl.Get.exe
-  - ./Kl.Make.Net45/bin/Release/Kl.Make.exe
+  - mono ./Kl.Get.Net45/bin/Release/Kl.Get.exe
+  - mono ./Kl.Make.Net45/bin/Release/Kl.Make.exe
   - xbuild /p:Configuration=Release Shen.Net45.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.6.0/tools/nunit3-console.exe ./Shen.Tests.Net45/bin/Release/Shen.Tests.dll
   - pushd ./Shen.TestSuite.Net45/bin/Release
