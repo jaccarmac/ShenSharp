@@ -17,8 +17,15 @@ let private pdbName = sprintf "%s.pdb" generatedModule
 let private searchPattern = sprintf "%s.*" generatedModule
 let private deps = [
     "Kl.dll";
+    UriBuilder(typedefof<FSharp.Core.unit>.Assembly.CodeBase).Uri.LocalPath;
     combine [RuntimeEnvironment.GetRuntimeDirectory(); "mscorlib.dll"];
-    UriBuilder(typedefof<FSharp.Core.unit>.Assembly.CodeBase).Uri.LocalPath
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Console.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Private.CoreLib.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.ObjectModel.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Runtime.Extensions.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Linq.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Net.Requests.dll"];
+    combine [RuntimeEnvironment.GetRuntimeDirectory(); "System.Runtime.Numerics.dll"];
 ]
 let private sharedMetadataPath = combine ["ShenSharp.Shared"; "Shared.fs"]
 
@@ -82,6 +89,7 @@ let make sourcePath sourceFiles outputPath =
     let sharedAst = parseFile sharedMetadataPath
     let metadataAst = buildMetadataFile generatedModule
     printfn "Compiling kernel..."
+    printfn "%A" deps
     emit [ast; sharedAst; metadataAst]
     printfn "Copying artifacts to output path..."
     for file in Directory.GetFiles(".", searchPattern) do
