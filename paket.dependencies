@@ -2,13 +2,8 @@ source https://www.nuget.org/api/v2
 
 nuget FParsec 1.0.3
 nuget FSharp.Compiler.Service 25.0.1 prerelease
-nuget FSharp.Core 4.5.2 prerelease
 nuget ILRepack.Lib 2.0.12 prerelease restriction: >= net452
 nuget Microsoft.NET.Test.Sdk 15.8.0
-nuget Microsoft.Web.Xdt 2.1.1 prerelease restriction: >= net452
 nuget NuGet.Core 2.14.0 prerelease restriction: >= net452
 nuget nunit 3.10.1
 nuget NUnit3TestAdapter 3.10.0
-nuget System.Collections.Immutable 1.5.0 prerelease restriction: >= net45
-nuget System.Reflection.Metadata 1.6.0 prerelease restriction: >= net45
-nuget System.ValueTuple 4.5.0 prerelease restriction: >= net45
