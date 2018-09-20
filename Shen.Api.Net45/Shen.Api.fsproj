@@ -10,7 +10,7 @@
     <RootNamespace>Shen.Api</RootNamespace>
     <AssemblyName>Shen.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.5.2</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Name>Shen.Api</Name>
   </PropertyGroup>
