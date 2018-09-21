@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
   </PropertyGroup>
@@ -26,8 +27,5 @@
     <ProjectReference Include="..\Kl\Kl.fsproj" />
     <ProjectReference Include="..\Shen.Api\Shen.Api.fsproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="FSharp.Core" Version="4.0.0.1" />
-    <PackageReference Include="NUnit" Version="3.6.0" />
-  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

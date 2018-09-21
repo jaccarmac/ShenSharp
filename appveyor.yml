@@ -1,9 +1,7 @@
 image: Visual Studio 2017
 before_build:
-  - msbuild /t:Restore Kl.sln
-  - msbuild /t:Restore Shen.sln
+  - .\.paket\packet.exe restore
   - nuget install NUnit.ConsoleRunner -Version 3.6.0 -OutputDirectory testrunner
-  - mkdir packages
 build_script:
   - msbuild /p:Configuration=Release Kl.sln
   - .\testrunner\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe .\Kl.Tests\bin\Release\net45\Kl.Tests.dll

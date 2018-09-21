@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6C835348-1F75-4FE1-8FDF-E21A3C1897C6}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Kl", "Kl\Kl.fsproj", "{24903340-789D-4419-AC4B-C2C1F8000C54}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Kl.Tests", "Kl.Tests\Kl.Tests.fsproj", "{8F843609-9DAD-4BC4-9A6D-C2465E7DE235}"
