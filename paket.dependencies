@@ -2,7 +2,7 @@ source https://www.nuget.org/api/v2
 
 nuget FParsec 1.0.2
 nuget FSharp.Compiler.Service 8.0.0
-nuget FSharp.Core 4.0.0.1
+nuget FSharp.Core 4.0.0.1 redirects: on
 nuget ILRepack.Lib 2.0.12
 nuget NuGet.Core 2.14.0
 nuget NUnit 3.6.0
