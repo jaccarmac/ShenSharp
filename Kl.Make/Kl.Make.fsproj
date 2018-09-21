@@ -26,7 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Kl\Kl.fsproj" />
   </ItemGroup>
-  <Target Name="AfterBuild">
+  <Target Name="CopyFSharpCoreResources" BeforeTargets="Build">
     <Copy SourceFiles="..\packages\FSharp.Core\lib\net40\FSharp.Core.optdata" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="..\packages\FSharp.Core\lib\net40\FSharp.Core.sigdata" DestinationFolder="$(OutputPath)" />
   </Target>
