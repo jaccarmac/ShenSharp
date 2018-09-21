@@ -1,6 +1,6 @@
 image: Visual Studio 2017
 before_build:
-  - .\.paket\packet.exe restore
+  - .\.paket\paket.exe restore
   - nuget install NUnit.ConsoleRunner -Version 3.6.0 -OutputDirectory testrunner
 build_script:
   - msbuild /p:Configuration=Release Kl.sln
