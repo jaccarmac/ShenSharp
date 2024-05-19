@@ -1,0 +1,31 @@
+name: Build.
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: './src'
+    steps:
+      - name: Checkout.
+        uses: actions/checkout@v4
+      - name: Setup .NET.
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - name: Build Kl.
+        run: dotnet build Kl.sln
+      - name: Test Kl.
+        run: dotnet test Kl.sln
+      - name: Fetch kernel.
+        run: dotnet run --project Kl.Get.
+      - name: Compile kernel.
+        run: dotnet run --project Kl.Make.
+      - name: Build Shen.
+        run: dotnet build Shen.sln
+      - name: Test Shen runtime.
+        run: dotnet test Shen.sln
+      - name: Test Shen.
+        run: dotnet run --project Shen.TestSuite
