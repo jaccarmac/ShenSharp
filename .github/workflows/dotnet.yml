@@ -20,9 +20,9 @@ jobs:
       - name: Test Kl.
         run: dotnet test Kl.sln
       - name: Fetch kernel.
-        run: dotnet run --project Kl.Get.
+        run: dotnet run --project Kl.Get
       - name: Compile kernel.
-        run: dotnet run --project Kl.Make.
+        run: dotnet run --project Kl.Make
       - name: Build Shen.
         run: dotnet build Shen.sln
       - name: Test Shen runtime.
